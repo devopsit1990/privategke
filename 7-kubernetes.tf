@@ -28,9 +28,6 @@ resource "google_container_cluster" "primary" {
     channel = "REGULAR"
   }
 
-  workload_identity_config {
-    workload_pool = "devops-v4.svc.id.goog"
-  }
 
   ip_allocation_policy {
     cluster_secondary_range_name  = "k8s-pod-range"
